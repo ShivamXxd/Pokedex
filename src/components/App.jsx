@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 
 function App() {
   const [name, setName] = useState("");
+  const [naam, setNaam] = useState("");
   const [type, setType] = useState("");
   const [weight, setWeight] = useState("");
   const [height, setHeight] = useState("");
@@ -23,10 +24,13 @@ function App() {
       const pokeData = await axios.get(
         `https://pokeapi.co/api/v2/pokemon/${name}`
       );
+      const poke = pokeData.data.name;
+      const pokeNaam = poke.slice(0, 1).toUpperCase() + poke.slice(1);
       const pokeWeight = pokeData.data.weight;
       const pokeHeight = pokeData.data.height;
       const pokeType = pokeData.data.types[0].type.name;
-      const pokeImg = pokeData.data.sprites.front_default;
+      const pokeImg =
+        pokeData.data.sprites.other["official-artwork"].front_default;
       const pokeMoves = pokeData.data.moves;
       let proxyArray = [];
       for (let i = 0; i < pokeMoves.length; i++) {
@@ -36,6 +40,7 @@ function App() {
         }
       }
       setMoves(proxyArray);
+      setNaam(pokeNaam);
       setType(pokeType);
       setWeight(pokeWeight);
       setHeight(pokeHeight);
@@ -50,7 +55,7 @@ function App() {
       <Search onSearch={getName} />
       <Card
         className={hasSearched ? "" : "hide-card"}
-        pokeName={name}
+        pokeName={naam}
         pokeType={type}
         height={height}
         weight={weight}
@@ -61,4 +66,5 @@ function App() {
     </div>
   );
 }
+
 export default App;

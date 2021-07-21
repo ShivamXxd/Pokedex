@@ -77,10 +77,10 @@ ul li {
 
 .poke-img {
   position: absolute;
-  left: 1%;
-  top: 0;
-  width: 190px;
-  height: 190px;
+  left: 5%;
+  top: 1%;
+  width: 170px;
+  height: 170px;
   z-index: 1;
 }
 
@@ -137,8 +137,8 @@ ul li {
   background: rgb(120, 238, 91);
 }
 .water {
-  color: rgb(14, 166, 177);
-  background: rgb(111, 244, 248);
+  color: rgb(0, 87, 128);
+  background: rgb(129, 188, 216);
 }
 .bug {
   color: rgb(146, 187, 0);
@@ -157,8 +157,8 @@ ul li {
   background: rgb(243, 253, 100);
 }
 .steel {
-  color: rgb(61, 124, 111);
-  background: rgb(137, 190, 186);
+  color: rgb(153, 163, 163);
+  background: rgb(224, 229, 229);
 }
 .dark {
   color: rgb(0, 0, 0);
@@ -191,4 +191,12 @@ ul li {
 .fighting {
   color: rgb(109, 0, 0);
   background: rgb(192, 53, 53);
+}
+.poison {
+  color: rgb(88, 7, 88);
+  background: rgb(150, 58, 150);
+}
+.flying {
+  color: rgb(147, 49, 185);
+  background: rgb(220, 153, 252);
 }
