@@ -12,20 +12,25 @@ function Card(props) {
 
   return (
     <div className={"info-card" + props.className}>
-      <h1>{props.pokeName}</h1>
-      <button className={"type " + props.pokeType + props.className}>
-        {props.pokeType.toUpperCase()}
-      </button>
-      <h3 className={props.className}>{heightM} meters</h3>
-      <h3 className={props.className}>{weightKg} kilograms</h3>
-      <CardMedia className="poke-img" image={props.img} />
-      <h2 className={props.className}>Moveset</h2>
-      <ul>
-        <li>{props.moves[randomArray[0]]}</li>
-        <li>{props.moves[randomArray[1]]}</li>
-        <li>{props.moves[randomArray[2]]}</li>
-        <li>{props.moves[randomArray[3]]}</li>
-      </ul>
+      <div className="container">
+        <h1 className={props.className}>{props.pokeName}</h1>
+        <button className={"type " + props.pokeType + " " + props.className}>
+          {props.pokeType.toUpperCase()}
+        </button>
+        <h3 className={props.className}>{heightM} meters</h3>
+        <h3 className={props.className}>{weightKg} kilograms</h3>
+        <CardMedia
+          className={"poke-img " + props.className}
+          image={props.img}
+        />
+        <h2 className={props.className + " moveset"}>Moveset</h2>
+        <ul className={props.className}>
+          <li>{props.moves[randomArray[0]]}</li>
+          <li>{props.moves[randomArray[1]]}</li>
+          <li>{props.moves[randomArray[2]]}</li>
+          <li>{props.moves[randomArray[3]]}</li>
+        </ul>
+      </div>
     </div>
   );
 }

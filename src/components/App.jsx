@@ -6,7 +6,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 function App() {
-  const [name, setName] = useState("");
+  const [name, setName] = useState("pikachu");
   const [naam, setNaam] = useState("");
   const [type, setType] = useState("");
   const [weight, setWeight] = useState("");
@@ -24,6 +24,7 @@ function App() {
       const pokeData = await axios.get(
         `https://pokeapi.co/api/v2/pokemon/${name}`
       );
+      console.log(pokeData.data);
       const poke = pokeData.data.name;
       const pokeNaam = poke.slice(0, 1).toUpperCase() + poke.slice(1);
       const pokeWeight = pokeData.data.weight;

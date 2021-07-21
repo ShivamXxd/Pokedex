@@ -14,10 +14,12 @@ body {
 }
 header {
   font-size: 2rem;
+  letter-spacing: 3px;
   color: rgb(255, 208, 0);
   text-shadow: 3px 0 0 black, -3px 0 0 black, 0 3px 0 black, 0 -3px 0 black,
     2px 2px black, -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black;
 }
+
 footer {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #ccc;
@@ -35,6 +37,9 @@ footer p {
 }
 
 /* pokemon information card */
+.container {
+  margin-top: 59px;
+}
 .hide-card {
   display: none !important;
 }
@@ -43,8 +48,8 @@ footer p {
   color: rgb(80, 80, 80);
   text-align: right;
   position: absolute;
-  width: 22%;
-  height: 50%;
+  width: 334px;
+  height: 376px;
   left: 50%;
   transform: translateX(-50%);
   top: 25%;
@@ -54,13 +59,12 @@ footer p {
   box-shadow: 0 0 20px 5px #fccb63;
 }
 
-h1 {
-  margin-right: 20px;
-}
-
-h2 {
-  margin: 30px 0 10px 0;
-  text-align: center;
+.info-card h1 {
+  white-space: nowrap;
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 h3 {
@@ -77,11 +81,15 @@ ul li {
 
 .poke-img {
   position: absolute;
-  left: 5%;
-  top: 1%;
-  width: 170px;
-  height: 170px;
+  left: 8%;
+  top: 10%;
+  width: 150px;
+  height: 150px;
   z-index: 1;
+}
+.moveset {
+  margin: 50px 0 10px 0;
+  text-align: center;
 }
 
 /* Search-bar */
@@ -94,6 +102,7 @@ ul li {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
 .search-btn {
   padding: 8px;
@@ -119,8 +128,9 @@ ul li {
 
 /* pokemon type buttons */
 .type {
-  margin: 8px 20px;
-  width: 90px;
+  position: relative;
+  right: 20px;
+  top: -15px;
   height: 33px;
   border: none;
   border-radius: 5px;
@@ -166,7 +176,7 @@ ul li {
 }
 .ghost {
   color: rgb(72, 8, 92);
-  background: rgb(98, 58, 104);
+  background: rgb(120, 82, 126);
 }
 .psychic {
   color: rgb(146, 39, 160);

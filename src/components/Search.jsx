@@ -9,7 +9,11 @@ function Search(props) {
     setName(inputName);
   }
   function searchPokemon() {
-    props.onSearch(name);
+    if (name === "") {
+      return;
+    } else {
+      props.onSearch(name);
+    }
     setName("");
   }
   return (
@@ -20,6 +24,7 @@ function Search(props) {
         className="search-bar"
         type="text"
         placeholder="Search Pokemon"
+        spellCheck="false"
         onChange={handleChange}
         value={name}
       />
