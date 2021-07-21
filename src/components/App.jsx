@@ -43,7 +43,7 @@ function App() {
     }
     getData();
   }, [name]);
-
+  console.log(pokeData.data.height);
   return (
     <div>
       <Header />
