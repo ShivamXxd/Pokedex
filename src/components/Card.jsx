@@ -12,32 +12,34 @@ function Card(props) {
   var typesArray = props.pokeTypes;
 
   return (
-    <div className={"info-card" + props.className}>
-      <div className="container">
-        <h1 className={props.className}>{props.pokeName}</h1>
-        <button className={"type " + typesArray[0] + " " + props.className}>
-          {typesArray[0]}
-        </button>
-        {typesArray.length === 2 ? (
-          <button className={"type " + typesArray[1] + " " + props.className}>
-            {typesArray[1]}
+    <div id="wrap">
+      <div className={"info-card" + props.className}>
+        <div className="container">
+          <h1 className={props.className}>{props.pokeName}</h1>
+          <button className={"type " + typesArray[0] + " " + props.className}>
+            {typesArray[0]}
           </button>
-        ) : (
-          <div style={{ display: "none" }}></div>
-        )}
-        <h3 className={props.className}>{heightM} meters</h3>
-        <h3 className={props.className}>{weightKg} kilograms</h3>
-        <CardMedia
-          className={"poke-img " + props.className}
-          image={props.img}
-        />
-        <h2 className={props.className + " moveset"}>Moveset</h2>
-        <ul className={props.className}>
-          <li>{props.moves[randomArray[0]]}</li>
-          <li>{props.moves[randomArray[1]]}</li>
-          <li>{props.moves[randomArray[2]]}</li>
-          <li>{props.moves[randomArray[3]]}</li>
-        </ul>
+          {typesArray.length === 2 ? (
+            <button className={"type " + typesArray[1] + " " + props.className}>
+              {typesArray[1]}
+            </button>
+          ) : (
+            <div style={{ display: "none" }}></div>
+          )}
+          <h3 className={props.className}>{heightM} meters</h3>
+          <h3 className={props.className}>{weightKg} kilograms</h3>
+          <CardMedia
+            className={"poke-img " + props.className}
+            image={props.img}
+          />
+          <h2 className={props.className + " moveset"}>Moveset</h2>
+          <ul className={props.className}>
+            <li>{props.moves[randomArray[0]]}</li>
+            <li>{props.moves[randomArray[1]]}</li>
+            <li>{props.moves[randomArray[2]]}</li>
+            <li>{props.moves[randomArray[3]]}</li>
+          </ul>
+        </div>
       </div>
     </div>
   );

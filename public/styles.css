@@ -37,7 +37,14 @@ footer p {
 }
 
 /* pokemon information card */
-
+#wrap {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .container {
   margin-top: 59px;
 }
@@ -53,7 +60,7 @@ footer p {
   height: 376px;
   left: 50%;
   transform: translateX(-50%);
-  top: 25%;
+  /* top: 25%; */
   padding: 20px 0;
   border-radius: 15px;
   background-color: #fcebbc;
