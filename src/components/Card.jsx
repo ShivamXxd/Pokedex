@@ -9,14 +9,22 @@ function Card(props) {
     var r = Math.floor(Math.random() * props.moves.length);
     if (randomArray.indexOf(r) === -1) randomArray.push(r); // push if random number is not in array
   }
+  var typesArray = props.pokeTypes;
 
   return (
     <div className={"info-card" + props.className}>
       <div className="container">
         <h1 className={props.className}>{props.pokeName}</h1>
-        <button className={"type " + props.pokeType + " " + props.className}>
-          {props.pokeType.toUpperCase()}
+        <button className={"type " + typesArray[0] + " " + props.className}>
+          {typesArray[0]}
         </button>
+        {typesArray.length === 2 ? (
+          <button className={"type " + typesArray[1] + " " + props.className}>
+            {typesArray[1]}
+          </button>
+        ) : (
+          <div style={{ display: "none" }}></div>
+        )}
         <h3 className={props.className}>{heightM} meters</h3>
         <h3 className={props.className}>{weightKg} kilograms</h3>
         <CardMedia

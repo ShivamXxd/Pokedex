@@ -128,14 +128,16 @@ ul li {
 
 /* pokemon type buttons */
 .type {
+  margin-left: 5px;
   position: relative;
   right: 20px;
   top: -15px;
   height: 33px;
   border: none;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: 1.1rem;
   padding: 7px;
+  display: inline-block;
 }
 
 .fire {
