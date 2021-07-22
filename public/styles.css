@@ -37,6 +37,7 @@ footer p {
 }
 
 /* pokemon information card */
+
 .container {
   margin-top: 59px;
 }
@@ -132,7 +133,6 @@ ul li {
   position: relative;
   right: 20px;
   top: -15px;
-  height: 33px;
   border: none;
   border-radius: 5px;
   font-size: 1.1rem;
@@ -153,8 +153,8 @@ ul li {
   background: rgb(129, 188, 216);
 }
 .bug {
-  color: rgb(146, 187, 0);
-  background: rgb(184, 238, 97);
+  color: rgb(147, 163, 0);
+  background: rgb(217, 255, 82);
 }
 .rock {
   color: rgb(116, 70, 9);
@@ -169,8 +169,8 @@ ul li {
   background: rgb(243, 253, 100);
 }
 .steel {
-  color: rgb(153, 163, 163);
-  background: rgb(224, 229, 229);
+  color: rgb(122, 133, 133);
+  background: rgb(193, 197, 197);
 }
 .dark {
   color: rgb(0, 0, 0);
@@ -197,8 +197,8 @@ ul li {
   background: rgb(177, 239, 255);
 }
 .normal {
-  color: rgb(109, 109, 109);
-  background: rgb(214, 214, 214);
+  color: rgb(121, 121, 121);
+  background: rgb(235, 235, 235);
 }
 .fighting {
   color: rgb(109, 0, 0);
