@@ -8,10 +8,12 @@ import { useState, useEffect } from "react";
 function App() {
   const [name, setName] = useState("pikachu");
   const [naam, setNaam] = useState("");
+  const [pokeItems, setPokeItems] = useState({
+    height: "",
+    weight: "",
+    image: "",
+  });
   const [types, setTypes] = useState([]);
-  const [weight, setWeight] = useState("");
-  const [height, setHeight] = useState("");
-  const [img, setImg] = useState("");
   const [moves, setMoves] = useState([]);
   const [hasSearched, setHasSearched] = useState(false);
 
@@ -27,14 +29,17 @@ function App() {
 
       const poke = pokeData.data.name;
       const pokeNaam = poke.slice(0, 1).toUpperCase() + poke.slice(1);
-      const pokeWeight = pokeData.data.weight;
-      const pokeHeight = pokeData.data.height;
+
+      setPokeItems({
+        height: pokeData.data.height,
+        weight: pokeData.data.weight,
+        image: pokeData.data.sprites.other["official-artwork"].front_default,
+      });
+
       let typeArray = [];
       for (let i = 0; i < pokeData.data.types.length; i++) {
         typeArray.push(pokeData.data.types[i].type.name);
       }
-      const pokeImg =
-        pokeData.data.sprites.other["official-artwork"].front_default;
       const pokeMoves = pokeData.data.moves;
       let proxyArray = [];
       for (let i = 0; i < pokeMoves.length; i++) {
@@ -46,9 +51,6 @@ function App() {
       setMoves(proxyArray);
       setTypes(typeArray);
       setNaam(pokeNaam);
-      setWeight(pokeWeight);
-      setHeight(pokeHeight);
-      setImg(pokeImg);
     }
     getData();
   }, [name]);
@@ -61,9 +63,9 @@ function App() {
         className={hasSearched ? "" : "hide-card"}
         pokeName={naam}
         pokeTypes={types}
-        height={height}
-        weight={weight}
-        img={img}
+        height={pokeItems.height}
+        weight={pokeItems.weight}
+        img={pokeItems.image}
         moves={moves}
       />
       <Footer />
