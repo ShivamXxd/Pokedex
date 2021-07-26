@@ -1,3 +1,5 @@
+import CardMedia from "@material-ui/core/CardMedia";
+
 function Card(props) {
   const weightKg = Number(props.weight) / 10;
   const heightM = Number(props.height) / 10;
@@ -24,7 +26,10 @@ function Card(props) {
           ) : null}
           <h3 className={props.className}>{heightM} meters</h3>
           <h3 className={props.className}>{weightKg} kilograms</h3>
-          <img className={"poke-img " + props.className} src={props.img} />
+          <CardMedia
+            className={"poke-img " + props.className}
+            image={props.img}
+          />
           <h2 className={props.className + " moveset"}>Moveset</h2>
           <ul className={props.className}>
             <li>{props.moves[randomArray[0]]}</li>
