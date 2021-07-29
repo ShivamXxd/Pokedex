@@ -6,7 +6,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 function App() {
-  const [name, setName] = useState("pikachu");
+  const [name, setName] = useState("ditto");
   const [naam, setNaam] = useState("");
   const [pokeItems, setPokeItems] = useState({
     height: "",
