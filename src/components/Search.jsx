@@ -9,7 +9,8 @@ function Search(props) {
     setName(inputName);
   }
   function searchPokemon() {
-    if (name === "") {
+    if (name.trim().length === 0) {
+      setName("");
       return;
     } else {
       props.onSearch(name);
