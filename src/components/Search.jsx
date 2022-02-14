@@ -28,6 +28,7 @@ function Search(props) {
         spellCheck="false"
         onChange={handleChange}
         value={name}
+        onKeyPress={(e) => e.key === "Enter" && searchPokemon()}
       />
       <button className="search-btn" onClick={searchPokemon}>
         Search
